@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500,600,700);
 
 // <Шрифт по умолчанию> ==========================================================================================
 $fontFamily: "Gilroy";
@@ -113,7 +113,7 @@ h6 {
 */
 body {
   color: $orangeColor;
-  background-color: #ddd;
+  background-color: #f5f5f5;
   &._lock {
     overflow: hidden;
   }
@@ -185,10 +185,15 @@ body {
   
 }
 ._btn {
-  // min-width: 100px;
-  padding: 14px 5px;
+  font-weight: 600;
+  width: max-content;
+  padding: 14px 10px;
   border-radius: 30px;
-  background-color: #ffd500;
+}
+._title {
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
 }
 // UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
 
@@ -260,9 +265,8 @@ body {
   .btn-accaunt, .btn-pay {
     display: flex;
     align-items: center;
-    justify-content: center; 
-  }
-  .btn-accaunt, .btn-pay { 
+    justify-content: center;
+    background-color: #ffd500;
     max-width: 175px;
     img {
       max-width: 18px;
@@ -304,12 +308,11 @@ body {
       margin: 15px 0px;
     }
     &__btn {
-      color: #fff;
       font-weight: 600;
       padding-left: 15px;
       padding-right: 15px;
       width: max-content;
-      background-color: #28a745;
+      background-color: #ffd500;
     }
   }  
   &__video {
@@ -341,7 +344,178 @@ body {
     }
   }
 }
-
+.our-courses {
+  &__title {
+    margin: 120px 0 40px 0;
+  }
+  .swiper {
+    &-wrapper {
+      padding: 25px 0;
+    }
+    &-slide {
+      display: flex;
+      height: auto;
+      padding: 30px;
+      border-radius: 30px;
+      background-color: #fff;
+      box-shadow: 28px 17px 34px -19px rgb(0 0 0 / 10%);
+    }
+  }
+  .slider {
+    &__icon {
+      text-align: center;
+      img {
+        width: 50px;
+      }
+    }
+    &__title {
+      margin: 20px 0;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: center;
+    }
+    &__info-list {
+      &__item {
+        margin: 8px 0;
+        font-size: 14px;
+        line-height: 1.2;
+        display: flex;
+        img {
+          width: 20px;
+          height: 20px;
+          margin-right: 12px;
+        }
+      }
+    }
+    &__btn {
+      padding: 14px 20px;
+      margin: 40px auto;
+      background-color: #ffd500;
+    }
+  }
+}
+.advantages {
+  &__title {
+    margin: 120px 0 20px 0;
+  }
+  &__subtitle {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  &__body {
+    padding: 50px;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 5px 7px 6px -4px rgb(0 0 0 / 15%), inset 0px -7px 2px -6px rgb(0 0 0 / 25);
+  }
+  &__list {
+    gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &__item {
+    font-size: 14px;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    img {
+      width: 40px;
+      margin-right: 20px;
+    }
+  }
+  &__btn {
+    margin: 40px auto;
+    background-color: #ffd500;
+  }
+}
+.excursion {
+  &__title {
+    text-align: center;
+    max-width: 700px;
+    margin: 100px auto 20px auto;
+  }
+  &__subtitle {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+  }
+  &__body {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__form {
+    padding: 30px;
+    border-radius: 30px;
+    display: flex;
+    flex: 0 1 48%;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffd500;
+    &__input {
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 10px;
+    }
+    &__btn {
+      font-size: 18px;
+      margin: 12px auto;
+      padding: 10px 25px;
+      width: 100%;
+      background-color: #28a745;
+    }
+    &__info {
+      font-size: 16px;
+      margin: 0 auto;
+    }
+  }
+  &__img {
+    width: 50%;
+    border-radius: 30px;
+    flex: 0 1 48%;
+    background-color: #ee8f53;
+  }
+}
+.location {
+  &__title {
+    max-width: 700px;
+    margin: 100px auto 0 auto;
+  }
+  &__subtitle {
+    max-width: 400px;
+    text-align: center;
+    margin: 20px auto 60px auto;
+  }
+}
+.footer {
+  padding-top: 30px;
+  border-top: 1px solid #ddd;
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    img {
+      max-width: 250px;
+    }
+  }
+  &__socials {
+    img {
+      max-width: 40px;
+      margin: 0 15px;
+    }
+  }
+  &__menu {
+    flex: 0 0 400px;
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      &__link {
+        margin: 10px 20px;
+      }
+    }
+  }
+}
 // ==========================================================================
 // Main
 // ==========================================================================
