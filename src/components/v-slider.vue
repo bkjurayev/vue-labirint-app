@@ -7,8 +7,35 @@
       <swiper
         :slides-per-view="4"
         :space-between="50"
+        :loop="true"
         @swiper="onSwiper"
         @slideChange="onSlideChange"
+        :breakpoints="{
+          '300': {
+            slidesPerView: 1,
+            spaceBetween: 40,
+          },
+          '400': {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          '640': {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          '768': {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          '991.98': {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+        }"
+        :pagination="{
+          clickable: true,
+        }"
+        :modules="modules"
       >
         <swiper-slide>
           <div class="our-courses__slider slider">
@@ -162,7 +189,11 @@
 
 <script>
 import { Swiper, SwiperSlide } from "swiper/vue";
+import { Pagination } from "swiper";
+
 import "swiper/css";
+import "swiper/css/pagination";
+
 
 export default {
   components: {
@@ -179,6 +210,7 @@ export default {
     return {
       onSwiper,
       onSlideChange,
+      modules: [Pagination],
     };
   },
 };

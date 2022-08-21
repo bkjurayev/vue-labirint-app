@@ -2,7 +2,9 @@
   
   <VHeader />
 
-  <main class="main">
+  <main class="main">   
+    <VMainTop />
+
     <VSlider />
 
     <VAdvantages />
@@ -23,5 +25,6 @@
   import VExcursion from "@/components/v-excursion.vue";
   import VLocation from "@/components/v-location.vue";
   import VFooter from "@/components/v-footer.vue";
+  import VMainTop from "@/components/v-main-top.vue";
 
 </script>
