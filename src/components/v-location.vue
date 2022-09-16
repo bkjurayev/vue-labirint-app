@@ -8,48 +8,54 @@
         Qanday qilib biz bilan bog'lansa bo'ladi?
       </p>
     </div>
-
-    <yandex-map 
-    :coords="coords"
-    :zoom="10" 
-    @click="onClick"
-  >
-    <ymap-marker 
-      :coords="coords" 
-      marker-id="123" 
-      hint-content="some hint" 
-    />
-  </yandex-map>
+    <div class="_container">
+      <div class="location__map">
+        <yandex-map 
+          :coords="coords" 
+          :zoom="18" 
+          :settings="{
+                apiKey: '',
+                lang: 'ru_RU',
+                enterprise: false,
+                version: '2.1',
+            }"
+          :controls="[]"
+          @click="onClick"
+        >
+          <div></div>
+          <ymap-marker :coords="coords" marker-id="123" hint-content="some hint" />
+        </yandex-map>
+      </div>
+    </div>
   </section>
 </template>
 
-
-
 <script>
-
+import { yandexMap, ymapMarker } from 'vue-yandex-maps'
 
 export default {
   data: () => ({
-    coords: [
-      54.82896654088406,
-      39.831893822753904,
-    ],
+    coords: [40.754364, 72.357309],
   }),
   methods: {
     onClick(e) {
-      this.coords = e.get('coords');
+      this.coords = e.get("coords");
     },
   },
+  components: { yandexMap, ymapMarker },
 };
 </script>
 
 <style>
-#app {
-  width: 100%;
-  height: 100vh;
+.location__map {
+  width: 70%;
+  height: 350px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .ymap-container {
   height: 100%;
+  display: flex;
 }
 </style>

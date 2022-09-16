@@ -5,14 +5,18 @@
   <main class="main">   
     <VMainTop />
 
-    <VSlider />
+    <VProfessionTrainingSlider />
 
     <VAdvantages />
 
+    <VForeignLanguagesSlider />
+
     <VExcursion />
 
-    <VLocation />
-    
+    <!-- <VOurTeam /> -->
+
+    <VLocation />    
+
     <VFooter />
   </main>
   
@@ -20,11 +24,13 @@
 
 <script setup>
   import VHeader from "@/components/v-header.vue";
-  import VSlider from "@/components/v-slider.vue";
+  import VProfessionTrainingSlider from "@/components/v-profession-training-slider.vue";
   import VAdvantages from "@/components/v-advantages.vue";
-  import VExcursion from "@/components/v-excursion.vue";
+  import VForeignLanguagesSlider from "@/components/v-foreign-languages-slider.vue";
+  import VExcursion from "@/components/v-excursion.vue";  
   import VLocation from "@/components/v-location.vue";
   import VFooter from "@/components/v-footer.vue";
   import VMainTop from "@/components/v-main-top.vue";
+
 
 </script>
